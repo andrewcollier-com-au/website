@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "deb http://deb.debian.org/debian bookworm main contrib non-free-firmware non-free"
+echo "Installing Wifi Module"
 
 apt update
 apt install linux-image-$(uname -r|sed 's,[^-]*-[^-]*-,,') linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms
