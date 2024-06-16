@@ -6,7 +6,7 @@ echo "Adding non-free and contrib repos to apt source file"
 REPO_URL="http://deb.debian.org/debian/"
 
 # Detect distribution codename
-DISTRIBUTION=$(lsb_release -cs)
+DISTRIBUTION=$(cat /etc/os-release | grep -e 'VERSION_CODENAME' | sed -n 's/.*VERSION_CODENAME=//p')
 
 if [ -z "$DISTRIBUTION" ]; then
     echo "Failed to detect distribution codename."
