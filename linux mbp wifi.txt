@@ -1,0 +1,25 @@
+github.com/wlan-firmware/firmware/b43/
+b43/ucode29_mimo.fw
+b43/ht0initvals29.fw
+b43/ht0bsinitvals29.fw
+
+
+
+ip link show
+ip link set dev {interface} up
+iwlist {interface} scan | grep -i 'frequency\|ssid\|signal'
+wpa_passphrase "SSID" pass > /etc/wpa_supplicant.conf
+ip link set dev {interface} down
+ip link set dev {interface} up
+
+
+
+
+iwconfig
+
+rm old kernal because reasons...
+
+
+sudo adduser <username> sudo
+
+echo "24000" | tee /sys/class/backlight/*/brightness
